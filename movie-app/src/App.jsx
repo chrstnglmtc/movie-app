@@ -8,20 +8,22 @@ import MovieUpdate from "./components/MovieUpdate";
 import Navigation from "./components/Navigation";
 
 
-function App() {
-
+const App = () => {
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/add" element={<MovieAdd />}/>
-        <Route path="/delete" element={<MovieDelete />}/>
-        <Route path="/list" element={<MovieList />}/>
-        <Route path="/update" element={<MovieUpdate />}/>
-      </Routes>
+
+      <div style={{ flex: 1, padding: '20px' }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/add" element={<MovieAdd />} />
+          <Route path="/delete" element={<MovieDelete />} />
+          <Route path="/list" element={<MovieList />} />
+          <Route path="/update" element={<MovieUpdate />} />
+        </Routes>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default App;
